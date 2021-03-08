@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="budgetApp.css">
+    
+    <title>Budgety</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+        body{
+           background-image: /*url('https://www.thebalance.com/thmb/CuRmWaPqmZNu8PknYetVXTqaT8Y=/3000x2000/filters:fill(auto,1)/what-makes-for-a-successful-budget-1289233_final-e4113f80d04442e18e3b6995561820c5.png');*/
+            background-repeat: no-repeat;  
+            background-size: 100% 100%;
+            //background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
+        }
+        #center_div{
+            font-family: 'Fredoka One', cursive;
+            width: 100vw;
+            height: 100vh;
+            background-color: #2f3542;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        .headBudgety{
+            color: white;
+            font-size: 70px;
+            text-transform: uppercase;
+            position: relative;
+        }
+        .headBudgety::before{
+            content: "~BudgetyApp~";
+/*            width: 592px;*/
+            width: 100%;
+            color: #2ed573;
+           position: absolute;
+            top: 0;
+            left: 0;
+            border-right: .4px solid #2ed573;
+            animation: slide 3s linear infinite;
+            -webkit-animation: slide 3s linear infinite;
+            overflow: hidden;
+        }
+        
+        @keyframes slide{
+            0%{
+                width: 0%;
+            }
+            50%{
+                width: 100%;
+            }
+            100%{
+                width: 0%;
+            }
+        }
+    </style>
+</head>
+
+<body >
+    
+ <div id="center_div">
+     <h1 class="headBudgety">~BudgetyApp~</h1>
+ </div>
+
+    <div class="top" class="container">
+        <div class="budget">
+            <div class="budget__title" data-aos="flip-left">
+                Available Budget in <span class="budget__title--month" data-aos="zoom-in-up">%Month%</span>:
+            </div>
+
+            <div class="budget__value" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">+ 2,345.64</div>
+
+            <div class="budget__income clearfix" data-aos="zoom-in-down">
+                <div class="budget__income--text">Income</div>
+                <div class="right">
+                    <div class="budget__income--value">+ 4,300.00</div>
+                    <div class="budget__income--percentage">&nbsp;</div>
+                </div>
+            </div>
+
+            <div class="budget__expenses clearfix" data-aos="fade-right">
+                <div class="budget__expenses--text">Expenses</div>
+                <div class="right clearfix">
+                    <div class="budget__expenses--value">- 1,954.36</div>
+                    <div class="budget__expenses--percentage">45%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+<br>
+    <br>
+
+
+    <div class="bottomm" class="container">
+        <div class="add">
+            <div class="add__container" data-aos="fade-down-right">
+                <select class="add__type">
+                    <option value="inc" selected>+</option>
+                    <option value="exp">-</option>
+                </select>
+                <input type="text" class="add__description" placeholder="Add description">
+                <input type="number" class="add__value" placeholder="Value">
+                <button class="add__btn"><i class="ion-ios-checkmark-outline"></i></button>
+            </div>
+        </div>
+
+        <div class="container clearfix" >
+            <div class="income" data-aos="fade-left"
+     data-aos-offset="100"
+     data-aos-easing="ease-in-sine">
+                <h2 class="icome__title">Income</h2>
+
+                <div class="income__list" data-aos="fade-right">
+                    <!--                //comment-->
+
+                    <!--<div class="item clearfix" id="income-0">
+                            <div class="item__description">Salary</div>
+                            <div class="right clearfix">
+                                <div class="item__value">+ 2,100.00</div>
+                                <div class="item__delete">
+                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item clearfix" id="income-1">
+                            <div class="item__description">Sold car</div>
+                            <div class="right clearfix">
+                                <div class="item__value">+ 1,500.00</div>
+                                <div class="item__delete">
+                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                </div>
+                            </div>
+                        </div>-->
+                    <!--                //comment-->
+
+                </div>
+            </div>
+<br>
+<br>
+
+            <div class="expenses"class="col-lg-8 col-xs-12 col-centered"  data-aos="fade-right"
+     data-aos-offset="100"
+     data-aos-easing="ease-in-sine">
+                <h2 class="expenses__title">Expenses</h2>
+
+                <div class="expenses__list" >
+                    <!--                //comment-->
+
+<!--
+                    <div class="item clearfix" id="expense-0">
+                        <div class="item__description">Apartment rent</div>
+                        <div class="right clearfix">
+                            <div class="item__value">- 900.00</div>
+                            <div class="item__percentage">21%</div>
+                            <div class="item__delete">
+                                <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item clearfix" id="expense-1">
+                        <div class="item__description">Grocery shopping</div>
+                        <div class="right clearfix">
+                            <div class="item__value">- 435.28</div>
+                            <div class="item__percentage">10%</div>
+                            <div class="item__delete">
+                                <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                            </div>
+                        </div>
+                    </div>
+-->
+
+                    <!--                //comment-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style=" height: 50%; width: 100%;"class="thirdBottom">
+        
+    </div>
+
+   <!--//<script src="app.js"></script>-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 120, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 2000,
+        });
+
+    </script>
+    <script src="budgetApp.js"></script>
+</body>
+
+</html>
